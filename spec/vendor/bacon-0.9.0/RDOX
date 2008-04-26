@@ -1,0 +1,35 @@
+Bacon
+- should have should.satisfy
+- should have should.equal
+- should have should.raise
+- should have should.raise with a block
+- should have a should.raise should return the exception
+- should have should.be.an.instance_of
+- should have should.be.nil
+- should have should.include
+- should have should.be.a.kind_of
+- should have should.match
+- should have should.not.raise
+- should have should.throw
+- should have should.not.satisfy
+- should have should.not.equal
+- should have should.not.match
+- should have should.be.identical_to/same_as
+- should have should.respond_to
+- should have should.be.close
+- should support multiple negation
+- should have should.<predicate>
+- should have should <operator> (>, >=, <, <=, ===)
+- should allow for custom shoulds
+- should have should.flunk
+
+before/after
+- should run in the right order
+
+shared/behaves_like
+- gets called where it is included
+- raises NameError when the context is not found
+- gets called where it is included
+- can access data
+
+28 specifications (288 requirements), 0 failures, 0 errors

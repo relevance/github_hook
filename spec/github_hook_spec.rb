@@ -40,6 +40,7 @@ describe GithubHook do
   it "has commit author" do
     author = @pc.commits["de8251ff97ee194a289832576287d6f8ad74e3d0"].author
     author.name.should == "Chris Wanstrath"
+    author.email.should == "chris@ozmm.org"
   end
   
 end

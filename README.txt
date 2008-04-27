@@ -1,14 +1,12 @@
 = GithubHook
 
-* FIX (url)
-
 == DESCRIPTION:
 
-FIX (describe your package)
+* Simple object wrapper around the Github post receive JSON payload. 
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* Provides a simple object wrapper around the post recieve hook that Github provides.  For more details on Github's post recieve hooks, see http://github.com/guides/post-receive-hooks.
 
 == SYNOPSIS:
 
@@ -16,17 +14,17 @@ FIX (describe your package)
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* json rubygem
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* sudo gem install github_hook
 
 == LICENSE:
 
 (The MIT License)
 
-Copyright (c) 2008 FIX
+Copyright (c) 2008 Rob Sanheim
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -2,7 +2,7 @@ require 'rubygems'
 require 'echoe'
 require './lib/github_hook.rb'
 
-Echoe.new('GithubHook', GithubHook::VERSION) do |p|
+Echoe.new('github_hook', GithubHook::VERSION) do |p|
   p.rubyforge_name = 'thinkrelevance'
   p.author = 'Rob Sanheim'
   p.email = 'opensource@thinkrelevance.com'

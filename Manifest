@@ -1,7 +1,8 @@
+CHANGELOG
 github_hook.gemspec
-History.txt
 lib/github_hook.rb
 Manifest
+Rakefile
 README.txt
 spec/github_hook_spec.rb
 spec/helper.rb

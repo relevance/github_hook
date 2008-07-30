@@ -10,11 +10,17 @@ class GithubHook
     @before, @after, @ref = payload["before"], payload["after"], payload["ref"]
     @repository = OpenStruct.new(payload["repository"])
     @owner = OpenStruct.new(payload["repository"]["owner"])
-    @commits = {}
-    payload["commits"].each do |sha1, commit|
-      commit = OpenStruct.new(commit)
-      commit.author = OpenStruct.new(commit.author)
-      commits[sha1] = commit
+    @commits = payload['commits'].map do |hash|
+      commit_ostruct = OpenStruct.new(hash)
+      commit_ostruct.sha = hash["id"]
+      commit_ostruct.author = OpenStruct.new(hash["author"])
+      commit_ostruct
     end
   end
+  
+  # just the most recent commit
+  def last_commit
+    @commits.first
+  end
+  
 end

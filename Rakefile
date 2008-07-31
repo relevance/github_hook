@@ -12,4 +12,5 @@ Echoe.new('github_hook', GithubHook::VERSION) do |p|
   rdoc_template = `allison --path`.strip << ".rb"
   p.rdoc_template = rdoc_template
   p.test_pattern = 'spec/**/*_spec.rb'
+  p.dependencies = "json"
 end

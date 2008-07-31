@@ -1,3 +1,4 @@
+gem 'json'
 require 'json'
 require 'ostruct'
 

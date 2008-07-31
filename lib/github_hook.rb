@@ -2,7 +2,7 @@ require 'json'
 require 'ostruct'
 
 class GithubHook
-  VERSION = '0.5.8'
+  VERSION = '0.6.0'
   attr_reader :before, :after, :ref, :repository, :owner, :commits
 
   def initialize(json)

@@ -1,4 +1,4 @@
-gem 'json'
+require 'rubygems'
 require 'json'
 require 'ostruct'
 
@@ -11,17 +11,27 @@ class GithubHook
     @before, @after, @ref = payload["before"], payload["after"], payload["ref"]
     @repository = OpenStruct.new(payload["repository"])
     @owner = OpenStruct.new(payload["repository"]["owner"])
-    @commits = payload['commits'].map do |hash|
+    @commits = create_commits(payload)
+  end
+  
+  def create_commits(payload)
+    payload['commits'].map do |hash|
       commit_ostruct = OpenStruct.new(hash)
       commit_ostruct.sha = hash["id"]
       commit_ostruct.author = OpenStruct.new(hash["author"])
       commit_ostruct
     end
+  rescue NoMethodError
+    payload['commits'].map do |sha, hash|
+      commit_ostruct = OpenStruct.new(hash)
+      commit_ostruct.sha = sha
+      commit_ostruct.author = OpenStruct.new(hash["author"])
+      commit_ostruct
+    end
   end
   
-  # just the most recent commit
   def last_commit
-    @commits.first
+    @commits.sort_by { |commit| commit.timestamp }.last
   end
   
 end

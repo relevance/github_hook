@@ -1,4 +1,4 @@
-v0.0.6. Update for latest Github json spec
+v0.0.6. Update for latest Github json spec; maintain backwards compatibility to avoid breaking stuff
 
 v0.5.8. Prep for release
 

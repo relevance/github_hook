@@ -58,7 +58,11 @@ describe GithubHook do
       commits[0].sha.should == "41a212ee83ca127e3c8cf465891ab7216a705f59"
       commits[1].sha.should == "de8251ff97ee194a289832576287d6f8ad74e3d0"
     end
-
+    
+    it "is not private if private flag is false" do 
+      @pc.repository.private.should == false
+    end
+    
     it "has commit values" do
       commit = @pc.commits.first
       commit.url.should == "http://github.com/defunkt/github/commit/41a212ee83ca127e3c8cf465891ab7216a705f59"
@@ -77,6 +81,17 @@ describe GithubHook do
     end
     
   end
+  
+  describe "private project" do
+    before { @pc = GithubHook.new(PrivateProject)}
+    
+    it "is private if private flag is false" do 
+      @pc.repository.private.should == true
+    end
+    
+  end
+    
+  
   
 end
 

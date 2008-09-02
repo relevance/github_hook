@@ -1,10 +1,10 @@
 Gem::Specification.new do |s|
   s.name = %q{github_hook}
-  s.version = "0.6.0"
+  s.version = "0.6.2"
 
   s.required_rubygems_version = Gem::Requirement.new("= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rob Sanheim"]
-  s.date = %q{2008-08-05}
+  s.date = %q{2008-09-02}
   s.description = %q{Wrapper around the github post receive JSON payload.}
   s.email = %q{opensource@thinkrelevance.com}
   s.extra_rdoc_files = ["CHANGELOG", "lib/github_hook.rb", "README.txt"]

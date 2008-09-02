@@ -83,15 +83,18 @@ describe GithubHook do
   end
   
   describe "private project" do
-    before { @pc = GithubHook.new(PrivateProject)}
     
-    it "is private if private flag is false" do 
+    it "is private if private flag is string true" do 
+      @pc = GithubHook.new(PrivateProjectWithStringTrue)
       @pc.repository.private.should == true
     end
     
+    it "is private if private flag is literal true" do
+      @pc = GithubHook.new(PrivateProjectWithLiteralTrue)
+      @pc.repository.private.should == true
+    end
+          
   end
-    
-  
   
 end
 

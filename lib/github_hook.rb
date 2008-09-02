@@ -3,7 +3,7 @@ require 'json'
 require 'ostruct'
 
 class GithubHook
-  VERSION = '0.6.2'
+  VERSION = '0.6.4'
   attr_reader :before, :after, :ref, :repository, :owner, :commits
 
   def initialize(json)
@@ -16,7 +16,7 @@ class GithubHook
   end
   
   def parse_private_flag(private_flag)
-    private_flag == "true" ? true : false
+    private_flag.to_s == "true" ? true : false
   end
   
   def create_commits(payload)

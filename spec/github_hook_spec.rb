@@ -15,7 +15,7 @@ describe GithubHook do
       commit = @pc.commits.first
       commit.url.should == "http://github.com/defunkt/github/commit/de8251ff97ee194a289832576287d6f8ad74e3d0"
       commit.message.should == "update pricing a tad"
-      commit.timestamp.should == "2008-02-15T14:36:34-08:00" 
+      commit.timestamp.should == Time.parse("2008-02-15T14:36:34-08:00")
     end
 
     it "has commit author" do
@@ -67,7 +67,7 @@ describe GithubHook do
       commit = @pc.commits.first
       commit.url.should == "http://github.com/defunkt/github/commit/41a212ee83ca127e3c8cf465891ab7216a705f59"
       commit.message.should == "okay i give in"
-      commit.timestamp.should == "2008-02-15T14:57:17-08:00"
+      commit.timestamp.should == Time.parse("2008-02-15T14:57:17-08:00")
     end
 
     it "has commit author" do

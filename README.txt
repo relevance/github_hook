@@ -6,7 +6,7 @@
 
 == FEATURES/PROBLEMS:
 
-* Provides a simple object wrapper around the post recieve hook that Github provides.  For more details on Github's post recieve hooks, see http://github.com/guides/post-receive-hooks.
+* Provides a simple object wrapper around the post receive hook that Github provides.  For more details on Github's post receive hooks, see http://github.com/guides/post-receive-hooks.
 
 == SYNOPSIS:
 
@@ -14,7 +14,7 @@
 
 == REQUIREMENTS:
 
-* json rubygem
+* activesupport
 
 == INSTALL:
 

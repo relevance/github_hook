@@ -1,13 +1,13 @@
 require 'rubygems'
-require 'json'
+require 'activesupport'
 require 'ostruct'
 
 class GithubHook
-  VERSION = '0.6.4'
+  VERSION = '0.7.0'
   attr_reader :before, :after, :ref, :repository, :owner, :commits
 
   def initialize(json)
-    payload = JSON.parse(json)
+    payload = ActiveSupport::JSON.decode(json)
     @before, @after, @ref = payload["before"], payload["after"], payload["ref"]
     @repository = OpenStruct.new(payload["repository"])
     @repository.private = parse_private_flag(@repository.private)

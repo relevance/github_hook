@@ -1,3 +1,5 @@
+v0.7.0. Switch to using ActiveSupport JSON instead of the JSON gem.  The JSON gem would not play nice with ActiveSupport's to_json within Rails projects, so the JSON gem had to go.  This means timestamps are returned as real Time objects instead of strings.
+
 v0.6.2. Capture private flag and parse it to boolean from string
 
 v0.6.0. Update for latest Github json spec; maintain backwards compatibility to avoid breaking stuff
